@@ -3,9 +3,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 def get_data(file): 
-    
-    print("Debut fonction get_data")
 
+    print("action en cours chez: get_data()")
     data = pd.read_csv(file)
 
     feat_raw = data['quizzes']
@@ -35,7 +34,6 @@ def get_data(file):
 
     x_train, x_test, y_train, y_test = train_test_split(feat, label, test_size=0.2, random_state=42)
     
-    print("Fin fonction get_data")
-    
+    print("action terminee chez: get_data()")
     return x_train, x_test, y_train, y_test
 
